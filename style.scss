@@ -1,0 +1,45 @@
+
+@mixin corner($radius) {
+    border-radius: $radius;
+    
+}
+
+@mixin transition {
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+body{
+    background-color: aqua;
+    font-family: sans-serif;
+}
+.wrapper{
+    text-align: center;
+    color: red;
+    h1{
+        font-family: 'Roboto',sans-serif;
+        font-size: 40px;
+        font-weight: 100;
+    }
+    #seconds,#tens{
+        font-size: 32px;
+    }
+    button{
+        @include corner(15px);
+        background-color: greenyellow;
+        color: red;
+        font-size: 20px;
+        padding: 18px 10px;
+        width: 180px;
+        margin: 10px;
+        cursor: pointer;
+        &:hover{
+            @include transition;
+            background-color: white;
+            color: blueviolet;
+            border: 1px solid white;
+        }
+    }
+
+}
